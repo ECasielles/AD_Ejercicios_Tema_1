@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AD_Ejercicios_Tema_1</string>
+    <string name="btnEj1">Ejercicio 1</string>
+    <string name="btnEj2">Ejercicio 2</string>
+    <string name="btnEj3">Ejercicio 3</string>
+    <string name="btnEj4">Ejercicio 4</string>
+    <string name="rbt1">Dólares a euros</string>
+    <string name="rbt2">Euros a dólares</string>
+    <string name="btnEj1Ok">Convertir</string>
+</resources>
