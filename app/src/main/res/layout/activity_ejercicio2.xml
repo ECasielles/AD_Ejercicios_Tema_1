@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.usuario.ad_ejercicios_tema_1.Ejercicio2Activity">
 
+
+
 </android.support.constraint.ConstraintLayout>
