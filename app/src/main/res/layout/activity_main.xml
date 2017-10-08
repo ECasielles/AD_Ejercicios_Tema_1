@@ -7,7 +7,7 @@
     tools:context="com.example.usuario.ad_ejercicios_tema_1.MainActivity">
 
     <Button
-        android:id="@+id/btnEj1"
+        android:id="@+id/btnConvertir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnEj1"

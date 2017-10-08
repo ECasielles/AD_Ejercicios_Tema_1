@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,73 +8,63 @@
     tools:context="com.example.usuario.ad_ejercicios_tema_1.Ejercicio1Activity">
 
 
-    <EditText
-        android:id="@+id/edtDolar"
+    <TextView
+        android:id="@+id/txvDolar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Dólar"
+        android:labelFor="@id/edtDolar"
+        android:layout_alignBaseline="@+id/edtDolar"
+        android:layout_alignBottom="@+id/edtDolar"
+        android:layout_alignParentStart="true"
+        />
+    <EditText
+        android:id="@+id/edtDolar"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Dólares"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="101dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="numberDecimal"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="60dp"
+        />
+
+    <TextView
+        android:id="@+id/txvEuro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Euro"
+        android:layout_alignBaseline="@+id/edtEuro"
+        android:layout_alignBottom="@+id/edtEuro"
+        android:labelFor="@id/edtEuro"
+        android:layout_alignParentStart="true"
+        />
 
     <EditText
         android:id="@+id/edtEuro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Euros"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/edtDolar"
-        app:layout_constraintTop_toBottomOf="@+id/edtDolar"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/edtDolar" />
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/edtDolar"
+        android:layout_alignParentEnd="true"
+        />
 
     <Button
-        android:id="@+id/btnEj1"
+        android:id="@+id/btnConvertir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnEj1Ok"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
 
-    <RadioGroup
-        android:id="@+id/rbt"
-        android:layout_width="139dp"
-        android:layout_height="88dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edtDolar"
-        app:layout_constraintTop_toBottomOf="@+id/edtDolar"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent">
+    <Switch
+        android:id="@+id/swtCambio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dólares a Euros"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        />
 
-        <RadioButton
-            android:id="@+id/rbt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/rbt1" />
-
-        <RadioButton
-            android:id="@+id/rbt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/rbt2" />
-    </RadioGroup>
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

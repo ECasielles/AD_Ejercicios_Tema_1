@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()){
-            case R.id.btnEj1:
+            case R.id.btnConvertir:
                 intent = new Intent(MainActivity.this, Ejercicio1Activity.class);
                 startActivity(intent);
                 break;
