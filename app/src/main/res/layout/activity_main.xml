@@ -17,8 +17,6 @@
         android:layout_marginBottom="28dp"
         app:layout_constraintLeft_toLeftOf="@+id/btnEj2"
         android:onClick="onClick"
-        android:layout_marginLeft="3dp"
-        android:layout_marginStart="3dp"
         tools:ignore="RtlHardcoded" />
 
     <Button
