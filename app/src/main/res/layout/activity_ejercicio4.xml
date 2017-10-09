@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.usuario.ad_ejercicios_tema_1.Ejercicio4Activity">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/edtnClave"
+        android:text="1"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/btnDescifrar"
+        android:layout_alignStart="@+id/btnDescifrar"
+        android:layout_alignRight="@+id/btnDescifrar"
+        android:layout_alignEnd="@+id/btnDescifrar" />
+
+    <Button
+        android:text="Descifrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDescifrar"
+        android:layout_alignBaseline="@+id/btnCifrar"
+        android:layout_alignBottom="@+id/btnCifrar"
+        android:layout_toRightOf="@+id/btnCifrar"
+        android:layout_toEndOf="@+id/btnCifrar"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <TextView
+        android:text="Escribe tu frase:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvMensaje"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Hola Caracola"
+        android:ems="10"
+        android:id="@+id/edtEntrada"
+        android:layout_alignBaseline="@+id/txvMensaje"
+        android:layout_alignBottom="@+id/txvMensaje"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Tu mensaje cifrado:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvCifra"
+        android:layout_below="@+id/edtEntrada"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtSalida"
+        android:singleLine="false"
+        android:layout_below="@+id/txvCifra"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Escribe aquí tu clave:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvClave"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Cifrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCifrar"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_below="@+id/edtnClave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+</RelativeLayout>

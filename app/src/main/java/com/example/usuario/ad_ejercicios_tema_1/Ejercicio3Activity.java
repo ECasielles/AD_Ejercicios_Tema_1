@@ -10,11 +10,15 @@ import android.widget.TextView;
 
 public class Ejercicio3Activity extends AppCompatActivity {
 
-    TextView txvTime;
+    TextView txvTime, txvTitle;
     Button btnComenzar, btnMas, btnMenos;
     int contadorTiempo = 5;
     MyCountDownTimer miContador;
     long time = 0;
+    int totalCafes = 0;
+    int maxCafes = 10;
+    String title = "Contador de cafés";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,8 @@ public class Ejercicio3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_ejercicio3);
 
         txvTime = (TextView) findViewById(R.id.txvTime);
+        txvTitle = (TextView) findViewById(R.id.txvTitleEj3);
+        txvTitle.setText(title);
         btnComenzar = (Button) findViewById(R.id.btnComenzar);
         btnMas = (Button) findViewById(R.id.btnMas);
         btnMenos = (Button) findViewById(R.id.btnMenos);
@@ -31,15 +37,17 @@ public class Ejercicio3Activity extends AppCompatActivity {
         btnComenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (miContador != null) {
-                    time = miContador.actualTime;
-                    miContador.cancel();
-                    miContador = null;
-                    btnComenzar.setText("Reanudar");
-                } else {
-                    miContador = new MyCountDownTimer(time, 1000, txvTime, Ejercicio3Activity.this);
-                    miContador.start();
-                    btnComenzar.setText("Pausa");
+                if (totalCafes < maxCafes) {
+                    if (miContador != null) {
+                        time = miContador.actualTime;
+                        miContador.cancel();
+                        miContador = null;
+                        btnComenzar.setText("Reanudar");
+                    } else {
+                        miContador = new MyCountDownTimer(time, 1000, txvTime, Ejercicio3Activity.this);
+                        miContador.start();
+                        btnComenzar.setText("Pausa");
+                    }
                 }
             }
         });
@@ -71,6 +79,8 @@ public class Ejercicio3Activity extends AppCompatActivity {
         time = contadorTiempo * 60 * 1000;
         miContador = null;
         btnComenzar.setText("Comenzar");
+        totalCafes++;
+        txvTitle.setText(title + ": " + totalCafes);
     }
 
 

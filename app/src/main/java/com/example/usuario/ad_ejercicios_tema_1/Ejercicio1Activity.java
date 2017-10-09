@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class Ejercicio1Activity extends AppCompatActivity {
 
@@ -33,12 +34,20 @@ public class Ejercicio1Activity extends AppCompatActivity {
                 if (E2D) {
                     Editable texto = edtDolar.getText();
                     if (texto != null){
-                        edtEuro.setText(String.valueOf(Float.valueOf(texto.toString()) * conversionDolarAEuro));
+                        try {
+                            edtEuro.setText(String.valueOf(Float.valueOf(texto.toString()) * conversionDolarAEuro));
+                        } catch (Exception e) {
+                            Toast.makeText(Ejercicio1Activity.this, "Error de entrada de datos", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 } else {
                     Editable texto = edtEuro.getText();
                     if (texto != null){
-                        edtDolar.setText(String.valueOf(Float.valueOf(texto.toString()) / conversionDolarAEuro));
+                        try {
+                            edtDolar.setText(String.valueOf(Float.valueOf(texto.toString()) / conversionDolarAEuro));
+                        } catch (Exception e) {
+                            Toast.makeText(Ejercicio1Activity.this, "Error de entrada de datos", Toast.LENGTH_SHORT).show();
+                        }
                     }
 
                 }

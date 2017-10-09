@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dólar"
-        android:labelFor="@id/edtDolar"
         android:layout_alignBaseline="@+id/edtDolar"
         android:layout_alignBottom="@+id/edtDolar"
         android:layout_alignParentStart="true"
@@ -35,7 +34,6 @@
         android:text="Euro"
         android:layout_alignBaseline="@+id/edtEuro"
         android:layout_alignBottom="@+id/edtEuro"
-        android:labelFor="@id/edtEuro"
         android:layout_alignParentStart="true"
         />
 
